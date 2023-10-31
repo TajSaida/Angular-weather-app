@@ -1,12 +1,13 @@
-<div class="app">
+<div >
   <div *ngIf="!showAboutMePage&&!isAboutMePage" class="home">
+    <div class="center-div">
       <div class="main-container">
         <div class="header-items">
           <div class="header"  >Angular Weather App</div>
           
         <div >
           <img 
-          src="https://media.licdn.com/dms/image/C4D03AQGmUvSSYd_E1w/profile-displayphoto-shrink_800_800/0/1661763775986?e=1704326400&v=beta&t=KADRpvtlqkFZv-leLfep1uRxo--LKJKZVVqKBxHZlic" 
+          src="../assets/saida.jpg" 
           alt="" 
           class="my-img"
           (click)="handleImageClick()"
@@ -35,16 +36,16 @@
             
             <div class="flexbox">
               <div class="left-side">
-                 <div class="one">
+                 <div class="more-info-icons">
                   <div class="material-icons">
                     air
                 </div>
                 <div *ngIf="data">{{data?.wind?.speed}}m/s
-                  <div>Wind Speed</div>
+                  <div class="align-text">Wind Speed</div>
                 </div>
                       
                  </div>
-                 <div class="one">
+                 <div class="more-info-icons">
                   <span class="material-icons">
                     sunny_snowing
                 </span>
@@ -55,21 +56,21 @@
                  </div>
               </div>
               <div class="right-side">
-                <div class="one">
+                <div class="more-info-icons">
                   <div class="material-icons">
                     water_drop
                 </div>
                 <div *ngIf="data">{{data?.main?.humidity}}%
-                  <div class="aligh-text">Humidity</div>
+                  <div class="align-text">Humidity</div>
                 </div>
                       
                  </div>
-                 <div class="one">
+                 <div class="more-info-icons">
                   <span class="material-icons">
                     light_mode
                 </span>
-                <div class="align-text" *ngIf="data">
-                  <div>Max Temp</div>
+                <div  *ngIf="data">
+                  <div class="align-text">Max Temp</div>
                   {{data?.main?.temp_max}}°F</div>
                  </div>
               </div>
@@ -77,6 +78,8 @@
            </div>
         </div>
     
+    </div>
+     
          
       </div>
    </div>

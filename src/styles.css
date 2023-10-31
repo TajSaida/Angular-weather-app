@@ -49,18 +49,7 @@ body{
     position: fixed;
 }
 
-.home {
-    background-color: hsla(0,0%,100%,.5);
-    border-radius: 20px;
-    box-shadow: 0 5px 5px rgba(0,0,0,.5);
-    margin: 1rem auto 0;
-    max-width: 170%;
-    padding: 20px 15px;
-    text-align: center;
-    width: 160%;
-    height: 90vh;
-    margin-left: -11%;
-}
+
 
 .date-day{
     font-size: 18px;
@@ -112,7 +101,6 @@ body{
 {
     display : inline-flex;
     justify-content: space-between;
-    /* height:500px; */
     width:500px;
     margin:1rem 0;
     background-color: #fff;
@@ -135,7 +123,6 @@ span.material-icons {
 .material-icons {
     font-size: 50px !important;
     color: #00bcd4 !important;
-    margin: 0 0.5rem;
 }
 .disable{
     color: #7d8087;
@@ -145,9 +132,9 @@ span.material-icons {
 .enable ,.disable {
     cursor: pointer;
 }
-.one ,.three{
+.more-info-icons {
     display: flex;
-    margin: 1rem;
+    margin: 2rem;
 }
 .search{
     display: flex;
@@ -176,9 +163,91 @@ span.material-icons {
     font-size: 1rem;
     cursor: pointer;
     padding: 1px;
-    /* margin-right: -18%; */
 
 }
 .text-icon-align{
     display: flex;
 }
+.align-text{
+    margin: 0.5rem 0;
+}
+
+  .center-div{
+    position: absolute;
+    top: 45%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: hsla(0,0%,100%,.5);
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    margin: 1rem auto 0;
+    max-width: 70%;
+    padding: 20px 15px;
+    text-align: center;
+    width: 50%;
+    height: 90vh;
+  }
+  .align-about-me{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .profile-pic{
+      margin:0.5rem;
+      height: 300px;
+      width: 300px;
+      border-radius: 150px;
+      box-shadow: 0 5px 5px rgba(0,0,0,.5);
+      float: left;
+      position: relative;
+  
+  }
+  .my-content{
+      color: black;
+      margin: 2rem;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 2.2rem;
+  }
+  .title{
+      font-family: 'Augestina';
+      font-size: 2rem;
+      text-transform: capitalize;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-top: 30%;
+      float: inline-end;
+  }
+  .iam,.Hi-there{
+      font-family: 'Dancing Script', cursive;
+      font-weight: 500 !important;
+      line-height: 2.5rem;
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+  }
+  .iam{
+      margin-left: 3.5rem !important;
+  }
+  .add-color{
+      color: #5d0fb8 !important;
+      font-size: 3rem;
+  }
+    .align-image{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 1rem;
+    }
+    .linkedIn-logo{
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      
+     
+    }
+    p.material-icons{
+      color:#5e0fb89f !important;
+      cursor: pointer;
+      margin-left:94%;
+      margin-top:-5%;
+    }
