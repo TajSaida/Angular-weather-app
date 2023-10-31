@@ -19,39 +19,29 @@ export class AppComponent {
  fahrenheitFlag:boolean=false;
  showAboutMePage: boolean = false;
  receivedFlag: boolean=true;
+ isAboutMePage:boolean=false;
 //   ngOnInit(): void {
 //    // this.weatherApiService.getWeatherData(this.cityName).subscribe((response) => {
 //    //   this.data = response;
-//    //   console.log(response, 'response')
 //    // });
 //  }
  ngOnInit() {
   this.route.params.subscribe((params) => {
-    this.showAboutMePage = params['flag'] === 'false'; // Convert to boolean as needed
-    console.log('saida',params['flag'],this.showAboutMePage)
+   this.isAboutMePage = window.location.href.includes('about-me');
+    this.showAboutMePage = params['flag'] === 'false'; 
   });
-  console.log('saida',this.showAboutMePage)
 
 }
- onSearch(){
-   console.log('clicked')
- }
- onCelsiusClicked (){
-   console.log('clicked')
- }
+ 
+ 
  handleImageClick() {
-  // Code to handle the image click event
-  console.log('Image clicked!');
   this.router.navigate(['/about-me']);
   this.showAboutMePage = true;
-  // Add your custom logic here
 }
  fetchData() {
      // this.data = response;
-     console.log(this.inputValue , 'myval')
    // this.weatherApiService.getWeatherData(this.inputValue).subscribe((response) => {
    //   this.data = response;
-   //   console.log(response, 'response')
    // });
    this.data ={
      "coord": {
@@ -105,15 +95,12 @@ export class AppComponent {
  convertToFahrenheitToCelsius () {
    this.celsiusFlag=true;
  
-   console.log('hello');
  }
  convertToCelsiusTOFahrenheit () {
-   // this.fahrenheitFlag=true;
    this.celsiusFlag=false;
  }
  onInputChange(event: Event) {
    this.inputValue = (event.target as HTMLInputElement).value;
-   // console.log('Input value changed: ' + inputValue);
  }
   dayDate= new Date().toDateString()
   title = 'angular-weather-app';

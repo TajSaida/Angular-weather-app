@@ -14,7 +14,6 @@ export class WeatherService {
   }
   
   getWeatherData(cityName:string): Observable<any>{
-    console.log(cityName , 'cityName')
    return this.http.get(environment.weatherBaseUrl+cityName,{
       headers:new HttpHeaders()
       .set(environment.XRapidAPIHostLabel , environment.XRapidAPIHostValue)

@@ -21,7 +21,6 @@ export class AboutMeComponent {
   }
   redirectToLinkedIn() {
     const linkedinURL = 'https://www.linkedin.com/in/saida-taj-m-r-b3656495/';
-    console.log('Mahiraas')
     window.open(linkedinURL, '_blank');
   }
 }
