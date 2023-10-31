@@ -1,0 +1,99 @@
+<div class="header">Angular Weather App</div>
+<div class="home">
+
+
+    <div class="search">
+        <input class="search-input" (input)="onInputChange($event)" value={{inputValue}} />
+        <button (click)="fetchData()" class="search-btn">Search</button>
+        
+            
+    </div>
+
+    <div class="main-container">
+        <h2 class="city-name">{{inputValue}}</h2>
+        <div class="date-day"> {{dayDate}}  </div>
+        <div class="weather-status"> 
+           
+              <img class="icon" src="https://freepngimg.com/thumb/categories/2275.png" alt="">
+          
+            <!-- <span class="temp">
+               {{celsiusFlag ? celsius :fahrenheit}} <span  [ngClass]="celsiusFlag ? 'enable' : 'disable'" (click)="convertToFahrenheitToCelsius()" >°C </span> |  <span  (click)="convertToCelsiusTOFahrenheit()" [ngClass]="!celsiusFlag ? 'enable' : 'disable'">°F</span>
+            </span> -->
+
+        </div>
+        <div class="weather">{{data &&data.weather && data.weather[0]?.description}} </div>
+        <div class="weather-info">
+            <div>
+                <span class="text-info">Wind</span>
+                <div class="wind">
+          
+                    <!-- <img 
+                    width="120px"
+                    src="https://media0.giphy.com/media/hyhBnzkUfFrsgfHdLD/giphy.gif?cid=6c09b9529i1h2xhdz5gnqo0swimcni9a23x89xle3ftewhj9&ep=v1_stickers_related&rid=giphy.gif&ct=s" alt=""> -->
+                                <div class="material-icons">
+                                    air
+                                </div>
+                                <span>{{data?.wind?.speed}}</span>
+                                    m/s Wind Speed 
+                            </div>
+            </div>
+        <div>
+            <span class="text-info">Humidity</span>
+            <div class="humidity">
+                <!-- <span class="humidity-icon">
+                    <img width="90px"
+                    src="https://www.icegif.com/wp-content/uploads/2023/08/icegif-896.gif" alt="">
+                </span> -->
+                <div class="material-icons">
+                    water_drop
+                </div>
+                <span>{{data?.main?.humidity}} % Humidity </span>
+            </div>
+        </div>
+      
+        
+        </div>
+        <div class="weather-info">
+            <div>
+                <span class="text-info">Min Temp</span>
+                <div class="min-temp">
+                    
+                    <span class="material-icons">sunny_snowing</span>
+                        <span>
+                            {{data?.main?.temp_min}}
+                        </span>
+                </div>
+            </div>
+            
+            <div>
+                <span class="text-info">Max Temp</span>
+                <div class="max-temp">
+                
+                    <span class="material-icons">
+                        light_mode
+                        </span>
+                        <span>{{data?.main?.temp_max}}</span>
+                        
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- <div class="forecast">Last 5 days forecast
+            <div class="cast-card">
+                <div class="forecast-card">
+                    <div class="day">Day</div>
+                <div class="forecast-icon">
+                    <img src="https://freepngimg.com/thumb/categories/2275.png" alt="" class="icon">
+
+                </div>
+                <div class="forecast-temp">
+                    19°C | °F
+                </div>
+                </div>
+                
+            </div>
+
+        </div> -->
+    </div>
+ </div>

@@ -1,1 +1,225 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --blue-1:#07253e;
+    --blue-2:#235f7d;
+    --yellow-1:#fac742;
+    --grey-1:#ededed;
+    --white:#fff;
+    --shadow-dark:rgba(0,0,0,0.3);
+    --shodow-light:rgba(255,255,255,0.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height:100vh;
+    background-image:url(./assets/vecteezy_abstract-kawaii-clouds-cartoon-on-blue-sky-background_6241180_495.jpg);
+     /* url("https://github.com/shemmee/React-Weather-App/blob/main/images/background.png?raw=true"); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container{
+    /* display: flex; */
+    /* justify-content: start; */
+    width: 100% !important;
+    height: 50vh;
+    /* opacity: 0.8; */
+    margin-top: 20px;
+
+    /* padding: 20px; */
+}
+.home-container{
+    border-radius: 20px;
+    width: 100%;
+    /* width: 400px; */
+
+}
+
+
+
+
+.header{
+    display: flex;  
+   justify-content: center; 
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* position: absolute; */
+    font-size: 2rem;
+    color:black;
+    /* margin-top: 15%; */
+    font-weight: 500;
+}
+.bg-img{
+    position: fixed;
+}
+
+.home {
+    background-color: hsla(0,0%,100%,.5);
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    margin: 1rem auto 0;
+    max-width: 170%;
+    padding: 20px 15px;
+    text-align: center;
+    width: 160%;
+    height: 90vh;
+    /* margin-left: -11%; */
+}
+
+.date-day{
+    font-size: 18px;
+    margin-top: 1rem;
+    font-style: oblique;
+    font-weight: 500;
+}
+
+.temp{
+    color: #1e2432;
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+}
+.icon{
+    width:50%;
+    height: 50%;
+   margin-top: -2%;
+   margin-bottom: -15%;
+}
+.weather-status{
+    display: flex;
+    
+}
+.header-items{
+    display: flex;
+}
+.my-img{
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+.weather{
+    color:#832a2a;
+    font-size:1.5rem;
+    margin: 1rem !important;
+}
+.city-name{
+    margin-top: 1rem;
+}
+
+.forecast{
+    margin-top: 2rem;
+}
+.cast-card{
+   /* display: flex; */
+   /* flex-direction: column; */
+   justify-content: space-between;
+   margin-top: 1rem;
+}
+.flexbox{
+
+}
+.forecast-card{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    display: flex;
+    /* flex: 1 1; */
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.flexbox
+{
+    display : inline-flex;
+    justify-content: space-between;
+    /* height:500px; */
+    width:500px;
+    margin:1rem 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+
+.weather-info{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.wind{
+    margin: 1rem;
+    /* margin-top: -30px ; */
+}
+span.material-icons {
+    font-size: 62px !important;
+    color: #FFC107 !important;
+}
+.material-icons {
+    font-size: 50px !important;
+    color: #00bcd4 !important;
+    margin: 0 0.5rem;
+}
+.disable{
+    color: #7d8087;
+    font-size: 54px;
+    font-weight: 600;
+    /* text-align: center; */
+}
+.enable ,.disable {
+    cursor: pointer;
+}
+.one ,.three{
+    display: flex;
+    margin: 1rem;
+}
+.search{
+
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* width: a; */
+
+   }
+   
+   .search-input{
+       width:400px;
+       height: 40px;
+       /* background-color:#fff; */
+       border-radius: 5px;
+       color: black;
+       padding: 5px;
+       font-size: 1.2rem;
+       border: 1px solid  #243545;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+
+   .search-btn{
+    width:20%;
+    height: 40px;
+    margin:auto 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 1px;
+    /* margin-right: -18%; */
+
+}
+.text-icon-align{
+    display: flex;
+}

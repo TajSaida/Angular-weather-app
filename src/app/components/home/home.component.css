@@ -1,0 +1,125 @@
+.home {
+    background-color: hsla(0,0%,100%,.5);
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    margin: 1rem auto 0;
+    /* max-width: 200%; */
+    padding: 20px 15px;
+    text-align: center;
+    /* width: 180%; */
+    height: 80vh;
+    margin-left: -11%;
+}
+
+.date-day{
+    font-size: 18px;
+    margin-top: 1rem;
+    font-style: oblique;
+    font-weight: 500;
+}
+
+.temp{
+    color: #1e2432;
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+}
+.icon{
+    width:150px;
+    height: 150px;
+   margin-top: -2%;
+}
+.weather-status{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.weather{
+    color:#832a2a;
+    font-size:1.2rem;
+}
+.city-name{
+    margin-top: 1rem;
+}
+
+.forecast{
+    margin-top: 2rem;
+}
+.cast-card{
+   /* display: flex; */
+   /* flex-direction: column; */
+   justify-content: space-between;
+   margin-top: 1rem;
+}
+.forecast-card{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.weather-info{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.wind{
+    margin-top: -30px ;
+}
+span.material-icons {
+    font-size: 62px !important;
+    color: #FFC107 !important;
+}
+.material-icons {
+    font-size: 50px !important;
+    color: #00bcd4 !important;
+}
+.disable{
+    color: #7d8087;
+    font-size: 54px;
+    font-weight: 600;
+    /* text-align: center; */
+}
+.enable ,.disable {
+    cursor: pointer;
+}
+
+.search{
+    /* margin-top:8% !important; */
+    /* margin-left:-10% !important; */
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: center; */
+   }
+   
+   .search-input{
+       width:70%;
+       height: 40px;
+       /* background-color:#fff; */
+       border-radius: 5px;
+       padding: 5px;
+       font-size: 1.2rem;
+       border: 1px solid  #243545;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       color:#fff
+   }
+
+   .search-btn{
+    width:20%;
+    height: 40px;
+    margin:auto 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 1px;
+    /* margin-right: -18%; */
+
+}
