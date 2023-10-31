@@ -18,7 +18,6 @@
 
 .profile-pic{
     margin:0.5rem;
-    /* position: absolute; */
     height: 300px;
     width: 300px;
     border-radius: 150px;
@@ -31,13 +30,10 @@
     position: absolute;
     width: 35%;
     margin: 2rem;
-    /* font-family: 'Dancing Script', cursive; */
     font-family: 'Roboto Mono', monospace;
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 2.2rem;
-    /* word-wrap: break-word; */
-    /* width: 0%; */
 }
 .title{
     font-family: 'Augestina';
@@ -47,7 +43,6 @@
     line-height: 1.5;
     margin-top: 30%;
     float: inline-end;
-    /* margin-right: -70%; */
 }
 .iam,.Hi-there{
     font-family: 'Dancing Script', cursive;
@@ -64,7 +59,7 @@
     font-size: 3rem;
 }
 .waving-hand {
-    font-size: 36px; /* Adjust the size as needed */
+    font-size: 36px;
     animation: wave 2s linear infinite;
   }
   

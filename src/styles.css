@@ -20,28 +20,16 @@ body{
     width: 100%;
     height:100vh;
     background-image:url(./assets/vecteezy_abstract-kawaii-clouds-cartoon-on-blue-sky-background_6241180_495.jpg);
-     /* url("https://github.com/shemmee/React-Weather-App/blob/main/images/background.png?raw=true"); */
     background-size: cover;
     display: flex;
     justify-content: center;
     
 }
 
-.container{
-    /* display: flex; */
-    /* justify-content: start; */
-    width: 100% !important;
-    height: 50vh;
-    /* opacity: 0.8; */
-    margin-top: 20px;
 
-    /* padding: 20px; */
-}
 .home-container{
     border-radius: 20px;
     width: 100%;
-    /* width: 400px; */
-
 }
 
 
@@ -53,10 +41,8 @@ body{
     margin: 0 auto;
     padding-bottom: 1rem;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    /* position: absolute; */
     font-size: 2rem;
     color:black;
-    /* margin-top: 15%; */
     font-weight: 500;
 }
 .bg-img{
@@ -119,30 +105,9 @@ body{
     margin-top: 1rem;
 }
 
-.forecast{
-    margin-top: 2rem;
-}
-.cast-card{
-   /* display: flex; */
-   /* flex-direction: column; */
-   justify-content: space-between;
-   margin-top: 1rem;
-}
-.flexbox{
 
-}
-.forecast-card{
-    align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 5px rgba(0,0,0,.5);
-    display: flex;
-    /* flex: 1 1; */
-    flex-direction: column;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-}
+
+
 .flexbox
 {
     display : inline-flex;
@@ -162,7 +127,6 @@ body{
 }
 .wind{
     margin: 1rem;
-    /* margin-top: -30px ; */
 }
 span.material-icons {
     font-size: 62px !important;
@@ -177,7 +141,6 @@ span.material-icons {
     color: #7d8087;
     font-size: 54px;
     font-weight: 600;
-    /* text-align: center; */
 }
 .enable ,.disable {
     cursor: pointer;
@@ -187,18 +150,14 @@ span.material-icons {
     margin: 1rem;
 }
 .search{
-
     display: flex;
     justify-content: center;
-    /* justify-content: space-around; */
-    /* width: a; */
-
+   
    }
    
    .search-input{
        width:400px;
        height: 40px;
-       /* background-color:#fff; */
        border-radius: 5px;
        color: black;
        padding: 5px;

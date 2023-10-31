@@ -1,6 +1,5 @@
 import { Component ,  OnInit  } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
@@ -9,7 +8,6 @@ import { WeatherService } from 'src/app/services/weather.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  home  = HomeComponent;
   constructor(private router:Router ,public weatherApiService:WeatherService,private route: ActivatedRoute){
   }
   data:any
