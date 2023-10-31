@@ -21,64 +21,79 @@
             <input class="search-input" (input)="onInputChange($event)" value={{inputValue}} />
             <button (click)="fetchData()" class="search-btn" value = {{inputValue}}>Search</button>
         </div>
-            <h2 *ngIf="data" class="city-name">{{inputValue}}</h2>
-            <h2 *ngIf="!data" class="city-name">City Name</h2>
-            <div class="date-day"> {{dayDate}}  </div>
-            <img class="icon" src="https://freepngimg.com/thumb/categories/2275.png" alt="">
-            <div class="weather-status"> 
-                <span class="temp">
-                   {{celsiusFlag ? celsius :fahrenheit}} <span  [ngClass]="celsiusFlag ? 'enable' : 'disable'" (click)="convertToFahrenheitToCelsius()" >°C </span> |  <span  (click)="convertToCelsiusTOFahrenheit()" [ngClass]="!celsiusFlag ? 'enable' : 'disable'">°F</span>
-                </span>
-    
+        <div class="display-info" *ngIf="!error">
+          <h2 *ngIf="data" class="city-name">{{inputValue}}</h2>
+          <h2 *ngIf="!data" class="city-name">City Name</h2>
+          <div class="date-day"> {{dayDate}}  </div>
+          <img class="icon" src="https://freepngimg.com/thumb/categories/2275.png" alt="">
+          <div class="weather-status"> 
+              <span class="temp">
+                 {{celsiusFlag ? celsius :fahrenheit}} <span  [ngClass]="celsiusFlag ? 'enable' : 'disable'" (click)="convertToFahrenheitToCelsius()" >°C </span> |  <span  (click)="convertToCelsiusTOFahrenheit()" [ngClass]="!celsiusFlag ? 'enable' : 'disable'">°F</span>
+              </span>
+  
+          </div>
+          <div class="weather">{{data &&data.weather && data.weather[0]?.description}} </div>
+          <div class="more-info">More Information!!</div>
+          
+          <div class="flexbox">
+            <div class="left-side">
+               <div class="more-info-icons">
+                <div class="material-icons">
+                  air
+              </div>
+              <div *ngIf="data">{{data?.wind?.speed}}m/s
+                <div class="align-text">Wind Speed</div>
+              </div>
+                    
+               </div>
+               <div class="more-info-icons">
+                <span class="material-icons">
+                  sunny_snowing
+              </span>
+               <div *ngIf="data">
+                <div class="align-text" >Min Temp</div>
+                {{data?.main?.temp_min}}°F</div>
+                    
+               </div>
             </div>
-            <div class="weather">{{data &&data.weather && data.weather[0]?.description}} </div>
-            <div class="more-info">More Information!!</div>
-            
-            <div class="flexbox">
-              <div class="left-side">
-                 <div class="more-info-icons">
-                  <div class="material-icons">
-                    air
-                </div>
-                <div *ngIf="data">{{data?.wind?.speed}}m/s
-                  <div class="align-text">Wind Speed</div>
-                </div>
-                      
-                 </div>
-                 <div class="more-info-icons">
-                  <span class="material-icons">
-                    sunny_snowing
-                </span>
-                 <div *ngIf="data">
-                  <div class="align-text" >Min Temp</div>
-                  {{data?.main?.temp_min}}°F</div>
-                      
-                 </div>
+            <div class="right-side">
+              <div class="more-info-icons">
+                <div class="material-icons">
+                  water_drop
               </div>
-              <div class="right-side">
-                <div class="more-info-icons">
-                  <div class="material-icons">
-                    water_drop
-                </div>
-                <div *ngIf="data">{{data?.main?.humidity}}%
-                  <div class="align-text">Humidity</div>
-                </div>
-                      
-                 </div>
-                 <div class="more-info-icons">
-                  <span class="material-icons">
-                    light_mode
-                </span>
-                <div  *ngIf="data">
-                  <div class="align-text">Max Temp</div>
-                  {{data?.main?.temp_max}}°F</div>
-                 </div>
+              <div *ngIf="data">{{data?.main?.humidity}}%
+                <div class="align-text">Humidity</div>
               </div>
-       
-           </div>
+                    
+               </div>
+               <div class="more-info-icons">
+                <span class="material-icons">
+                  light_mode
+              </span>
+              <div  *ngIf="data">
+                <div class="align-text">Max Temp</div>
+                {{data?.main?.temp_max}}°F</div>
+               </div>
+            </div>
+     
+         </div>
+      </div>
+      <div class="loading" *ngIf="isLoading">
+        Loading...
+   </div>
+        <div *ngIf="!data&&error" class="no-data">
+          <div class="no-data-info">{{error}}😕</div>
+          <div class="or">(OR)</div>
+          <div class="api-fail">
+            If the api is failing with exceed limit then limit for the month is over 
+          </div>
+          <div class="better-luck">Better luck Next Month 😀</div>
         </div>
-    
-    </div>
+        
+   
+  </div>
+        </div>
+           
      
          
       </div>

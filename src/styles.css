@@ -202,7 +202,7 @@ span.material-icons {
       position: relative;
   
   }
-  .my-content{
+  .my-content,.api-fail{
       color: black;
       margin: 2rem;
       font-family: 'Roboto Mono', monospace;
@@ -258,6 +258,11 @@ span.material-icons {
     }
    .header-items-aboutme{
     display: flex;
+   }
+   @media screen and (min-width: 1501px) and (max-width: 1900px) {
+    .center-div{
+        top: 65% !important;
+    }
    }
     @media screen and (min-width: 475px) and (max-width: 1500px) {
         .center-div{
@@ -332,5 +337,26 @@ span.material-icons {
             top:55% !important
         }
       }
+      .no-data{
+        height: 75vh !important;
+        margin: 4rem;
+      }
+      .no-data-info{
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+      .api-fail{
+        color: #ff00009d !important
+
+      }
+      .better-luck{
+        font-size: 2rem;
+        color: #095469;
+      }
+      .or{
+        font-size: 2.5rem;
+        color: #a9ae16;
+      }
+
       
       
