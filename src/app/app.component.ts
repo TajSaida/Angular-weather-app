@@ -12,7 +12,7 @@ export class AppComponent {
   }
   data:any
   cityName='Chittoor'
-  inputValue: string = 'Bengaluru';
+  inputValue: string = '';
   celsius: number =0;
  fahrenheit: number=0;
  celsiusFlag:boolean=true;

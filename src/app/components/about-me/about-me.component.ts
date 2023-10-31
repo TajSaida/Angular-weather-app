@@ -12,12 +12,11 @@ export class AboutMeComponent {
   }
   redirectToHome(){
     this.route.params.subscribe((params:any) => {
-      this.flagToParent = params['flag'] === 'false';// Convert to boolean as needed
+      this.flagToParent = params['flag'] === 'false';
     });
-    
-    window.location.href = 'http://localhost:4200/'
-  // this.router.navigate(['/']);
-   
+    const currentURL = window.location.href;
+    const newURL = currentURL.replace('/about-me', '');
+    window.location.href = newURL
   }
   redirectToLinkedIn() {
     const linkedinURL = 'https://www.linkedin.com/in/saida-taj-m-r-b3656495/';
