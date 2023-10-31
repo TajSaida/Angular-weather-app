@@ -25,7 +25,7 @@
           <h2 *ngIf="data" class="city-name">{{inputValue}}</h2>
           <h2 *ngIf="!data" class="city-name">City Name</h2>
           <div class="date-day"> {{dayDate}}  </div>
-          <img class="icon" src="https://freepngimg.com/thumb/categories/2275.png" alt="">
+          <img class="icon" src="../assets/2275.png" alt="">
           <div class="weather-status"> 
               <span class="temp">
                  {{celsiusFlag ? celsius :fahrenheit}} <span  [ngClass]="celsiusFlag ? 'enable' : 'disable'" (click)="convertToFahrenheitToCelsius()" >°C </span> |  <span  (click)="convertToCelsiusTOFahrenheit()" [ngClass]="!celsiusFlag ? 'enable' : 'disable'">°F</span>
