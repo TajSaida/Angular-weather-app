@@ -12,7 +12,7 @@ export class AppComponent {
   }
   data:any
   cityName='Chittoor'
-  inputValue: string = '';
+  inputValue: string = 'Bengaluru';
   celsius: number =0;
  fahrenheit: number=0;
  celsiusFlag:boolean=true;
@@ -26,6 +26,7 @@ export class AppComponent {
 //    // });
 //  }
  ngOnInit() {
+  console.log(window.screen.width, window.screen.height)
   this.route.params.subscribe((params) => {
    this.isAboutMePage = window.location.href.includes('about-me');
     this.showAboutMePage = params['flag'] === 'false'; 
