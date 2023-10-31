@@ -218,8 +218,8 @@ span.material-icons {
   .iam,.Hi-there{
       font-family: 'Dancing Script', cursive;
       font-weight: 500 !important;
-      line-height: 2.5rem;
-      font-size: 2.5rem;
+      line-height: 2rem;
+      font-size: 2rem;
       margin: 0.5rem 0;
   }
   .iam{
@@ -227,7 +227,7 @@ span.material-icons {
   }
   .add-color{
       color: #5d0fb8 !important;
-      font-size: 3rem;
+      font-size: 2rem;
   }
     .align-image{
         display: flex;
@@ -260,7 +260,7 @@ span.material-icons {
       font-size: 300% !important;
     }
     .home-icon{
-        margin-top: 4%;
+        margin-top: -3% !important;
     }
    .header-items-aboutme{
     display: flex;
@@ -311,7 +311,7 @@ span.material-icons {
             line-height: 1.5rem;
         }
         .add-color{
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         .my-content{
             font-size: 1rem;
