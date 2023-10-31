@@ -1,0 +1,4 @@
+command = "npm install && npm install -g @angular/cli && ng build --prod"
+  publish = "dist/"
+  functions = "lambda/"
+  node_version = "18.18.2"
