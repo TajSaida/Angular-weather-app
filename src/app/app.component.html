@@ -21,7 +21,7 @@
             <input class="search-input" (input)="onInputChange($event)" value={{inputValue}} />
             <button (click)="fetchData()" class="search-btn" value = {{inputValue}}>Search</button>
         </div>
-        <div class="display-info" *ngIf="!error">
+        <div class="display-info" *ngIf="!error&&!isLoading">
           <h2 *ngIf="data" class="city-name">{{inputValue}}</h2>
           <h2 *ngIf="!data" class="city-name">City Name</h2>
           <div class="date-day"> {{dayDate}}  </div>

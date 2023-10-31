@@ -66,10 +66,9 @@ body{
     margin: 0 auto;
 }
 .icon{
-    width:60%;
-    height: 50%;
-   margin-top: -2%;
-   margin-bottom: -15%;
+    width:40%;
+    height: 40%;
+    margin-bottom: -2rem;
 }
 .weather-status{
     display: flex;
@@ -133,11 +132,7 @@ span.material-icons {
 .enable ,.disable {
     cursor: pointer;
 }
-.more-info-icons {
-    display: flex;
-    margin: 2rem;
-    font-size: 80% !important;
-}
+
 .search{
     display: flex;
     justify-content: center;
@@ -186,6 +181,7 @@ span.material-icons {
     padding: 20px 15px;
     text-align: center;
     width: 50%;
+    height: 90%;
   }
   .align-about-me{
       display: flex;
@@ -246,6 +242,16 @@ span.material-icons {
       
      
     }
+    .loading{
+        font-size: 3rem;
+        margin: 6rem 0;
+        color: #e36734;
+    }
+      .more-info-icons{
+        display: flex;
+        margin: 1rem !important;
+        font-size: 70% !important;
+    }
     p.material-icons{
       color:#5e0fb89f !important;
       cursor: pointer;
@@ -254,20 +260,20 @@ span.material-icons {
       font-size: 300% !important;
     }
     .home-icon{
-        margin-top: -3.5%;
+        margin-top: 4%;
     }
    .header-items-aboutme{
     display: flex;
    }
    @media screen and (min-width: 1501px) and (max-width: 1900px) {
-    .center-div{
+    /* .center-div{
         top: 65% !important;
-    }
+    } */
    }
     @media screen and (min-width: 475px) and (max-width: 1500px) {
-        .center-div{
+        /* .center-div{
             top: 90% !important;
-        }
+        } */
         .header{
             font-size: 125%;
         }
@@ -299,10 +305,7 @@ span.material-icons {
         .search-btn{
             font-size: 0.8rem;
         }
-        .more-info-icons{
-            margin: 1rem !important;
-            font-size: 80% !important;
-        }
+      
         .Hi-there,.iam{
             font-size: 1.5rem;
             line-height: 1.5rem;
@@ -323,19 +326,19 @@ span.material-icons {
       
       }
       @media screen and (min-height: 801px) and (max-height: 950px){
-        .center-div{
+        /* .center-div{
             top:45% !important
-        }
+        } */
       }
       @media screen and (min-height: 600px) and (max-height: 800px){
-        .center-div{
+        /* .center-div{
             top:65% !important
-        }
+        } */
       }
       @media screen and (min-height: 951px) and (max-height: 1200px){
-        .center-div{
+        /* .center-div{
             top:55% !important
-        }
+        } */
       }
       .no-data{
         height: 75vh !important;

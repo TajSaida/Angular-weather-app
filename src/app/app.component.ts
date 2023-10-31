@@ -11,8 +11,7 @@ export class AppComponent {
   constructor(private router:Router ,public weatherApiService:WeatherService,private route: ActivatedRoute){
   }
   data:any
-  cityName='Chittoor'
-  inputValue: string = 'Bengaluru';
+  inputValue: string = '';
   celsius: number =0;
  fahrenheit: number=0;
  celsiusFlag:boolean=true;
@@ -44,6 +43,7 @@ export class AppComponent {
       this.fahrenheit = Math.floor(response?.main?.temp);
       this.celsius = Math.floor((this.fahrenheit - 32) * 5/9);
       this.isLoading = false;
+      console.log(response , this.data ,'saida')
     }, (error) => {
       this.isLoading = false;
       this.error = 'An error occurred while fetching data';
