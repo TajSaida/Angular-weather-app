@@ -1,27 +1,34 @@
-# AngularWeatherApp
+# Angular Weather App
+This is a web app developed using Angular. It allows users to search for the weather conditions of any city in the world and provides current weather information. The app fetches weather data using the Rapid open weather API.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
+# Features
+- Users can search for weather conditions of any city in the world.
+- The app displays the current weather conditions, including temperature and weather description.
+- The app utilizes the Rapid open weather API to fetch weather data.
 
-## Development server
+# Technologies & Tools Used
+- Angular
+- HTML
+- CSS
+- JavaScript
+- VS Code
+- Rapid open weather API
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Installation and Usage
+To use this app, you can follow these steps:
 
-## Code scaffolding
+- Clone the repository or download the source code.
+- Open the project in your preferred code editor.
+- Run  `npm install -g @angular/cli`
+- Run  `npm install` to install the necessary dependencies.
+- Run `ng serve -o` to start the development server.
+- Open your browser and navigate to `http://localhost:4200/` to use the app.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To use the app, simply type the name of the city you want to search for in the search bar and press Enter. The app will display the current weather conditions for the searched city.
 
-## Build
+# Demo
+A live demo of the Angular Weather App is available at [Saida Angular Weather App](https://saida-angular-weather.netlify.app/).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# License
+This project is licensed under the MIT license.
