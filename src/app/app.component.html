@@ -1,5 +1,5 @@
 <div >
-  <div *ngIf="!showAboutMePage&&!isAboutMePage" class="home">
+  <div *ngIf="!isAboutMePage" class="home">
     <div class="center-div">
       <div class="main-container">
         <div class="header-items">
@@ -16,13 +16,13 @@
         
       
         </div>
-        <div *ngIf="!showAboutMePage">
+        <div *ngIf="!isAboutMePage">
           <div class="search">
             <input class="search-input" (input)="onInputChange($event)" value={{inputValue}} />
             <button (click)="fetchData()" class="search-btn" value = {{inputValue}}>Search</button>
         </div>
         <div class="display-info" *ngIf="!error&&!isLoading">
-          <h2 *ngIf="data" class="city-name">{{inputValue}}</h2>
+          <h2 *ngIf="data" class="city-name">{{inputValue.toUpperCase()}}</h2>
           <h2 *ngIf="!data" class="city-name">City Name</h2>
           <div class="date-day"> {{dayDate}}  </div>
           <img class="icon" src="../assets/2275.png" alt="">
@@ -81,13 +81,10 @@
       <div class="loading" *ngIf="isLoading">
         Loading...
    </div>
-        <div *ngIf="!data&&error" class="no-data">
-          <div class="no-data-info">{{error}}😕</div>
-          <div class="or">(OR)</div>
+        <div *ngIf="!data&&error&&!isLoading">
           <div class="api-fail">
-            If the api is failing with exceed limit then limit for the month is over 
+            {{error}} 😕
           </div>
-          <div class="better-luck">Better luck Next Month 😀</div>
         </div>
         
    

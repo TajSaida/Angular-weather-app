@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router ,ActivatedRoute} from '@angular/router';
+import { Router } from '@angular/router';
+import { SharedService } from 'src/app/services/shared-service.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,16 +8,19 @@ import { Router ,ActivatedRoute} from '@angular/router';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
-  flagToParent: boolean=true
-  constructor(private router:Router,private route: ActivatedRoute){
+  flagToParent: boolean=true;
+  isFlag: boolean=false;
+  constructor(private router:Router,private sharedService: SharedService){
+    
   }
+  ngOnInit() {
+   this.sharedService.destroy();
+ }
   redirectToHome(){
-    this.route.params.subscribe((params:any) => {
-      this.flagToParent = params['flag'] === 'false';
-    });
-    const currentURL = window.location.href;
-    const newURL = currentURL.replace('/about-me', '');
-    window.location.href = newURL
+   
+    this.sharedService.setFlag(false);
+    this.router.navigate(['/']);
+   
   }
   redirectToLinkedIn() {
     const linkedinURL = 'https://www.linkedin.com/in/saida-taj-m-r-b3656495/';

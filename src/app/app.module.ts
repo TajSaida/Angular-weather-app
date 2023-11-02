@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { SharedService   } from './services/shared-service.service';
 
 const routes: Routes =[
                   { path: 'about-me', component: AboutMeComponent }
@@ -25,7 +26,7 @@ const routes: Routes =[
     BrowserAnimationsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [SharedService], 
   bootstrap: [AppComponent],
   exports:[RouterModule]
 })

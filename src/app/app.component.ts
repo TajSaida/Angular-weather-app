@@ -1,6 +1,7 @@
-import { Component ,  OnInit  } from '@angular/core';
-import { Router,ActivatedRoute } from '@angular/router';
+import { Component  } from '@angular/core';
+import { Router ,NavigationEnd} from '@angular/router';
 import { WeatherService } from 'src/app/services/weather.service';
+import { SharedService } from './services/shared-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,14 @@ import { WeatherService } from 'src/app/services/weather.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private router:Router ,public weatherApiService:WeatherService,private route: ActivatedRoute){
+  isFlagValue: boolean= true;
+
+  constructor(private router:Router ,public weatherApiService:WeatherService,private sharedService: SharedService){
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isAboutMePage= window.location.href.includes('about-me') ? true  :this.sharedService.getFlag()
+      }
+    });
   }
   data:any
   inputValue: string = '';
@@ -16,43 +24,34 @@ export class AppComponent {
  fahrenheit: number=0;
  celsiusFlag:boolean=true;
  fahrenheitFlag:boolean=false;
- showAboutMePage: boolean = false;
- receivedFlag: boolean=true;
- isAboutMePage:boolean=false;
+ isAboutMePage:boolean= true;
  isLoading:boolean=false;
- error:string=''
+ error:any=''
 
- ngOnInit() {
-  console.log(window.screen.width, window.screen.height)
-  this.route.params.subscribe((params) => {
-   this.isAboutMePage = window.location.href.includes('about-me');
-    this.showAboutMePage = params['flag'] === 'false'; 
-  });
 
-}
- 
- 
  handleImageClick() {
   this.router.navigate(['/about-me']);
-  this.showAboutMePage = true;
+  this.sharedService.destroy();
+
 }
  fetchData() {
    this.isLoading = true;
-   this.weatherApiService.getWeatherData(this.inputValue).subscribe((response) => {
-      this.data = response;
+  this.error= !this.inputValue ? 'Please enter city' :'';
+   this.inputValue && this.weatherApiService.getWeatherData(this.inputValue).subscribe((response) => {
+    const is404 = response?.cod == '404'
+      this.data = is404  ? {} : response;
+      this.error = is404   && response?.message ;
       this.fahrenheit = Math.floor(response?.main?.temp);
       this.celsius = Math.floor((this.fahrenheit - 32) * 5/9);
       this.isLoading = false;
-      console.log(response , this.data ,'saida')
     }, (error) => {
       this.isLoading = false;
-      this.error = 'An error occurred while fetching data';
-    });
-  
+      this.error = error?.error?.message ? error?.error?.message :'An error occurred while fetching data';
+    })
+  this.isLoading = !this.inputValue ? false :true;
  }
- onbtnClick=()=>{
-   
- }
+ 
+
  convertToFahrenheitToCelsius () {
    this.celsiusFlag=true;
  
